@@ -1,7 +1,7 @@
 # Workflow to build and test wheels.
 # To work on the wheel building infrastructure on a fork, comment out:
 #
-# if: github.repository == 'scipy/scipy'
+if: github.repository == 'jose-p-rivera/scipy'
 #
 # in the get_commit_message job include [wheel build] in your commit
 # message to trigger the build. All files related to wheel building are located
