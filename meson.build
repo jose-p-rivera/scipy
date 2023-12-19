@@ -17,6 +17,8 @@ project(
   ],
 )
 
+openblas_dep = dependency('openblas', version : '>=0.3.25')
+
 cc = meson.get_compiler('c')
 cpp = meson.get_compiler('cpp')
 
