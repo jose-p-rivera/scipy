@@ -13,7 +13,7 @@ project(
     'cpp_std=c++14',
     'fortran_std=legacy',
     'blas=openblas',
-    'lapack=3.10.1'
+    'lapack=openblas'
   ],
 )
 
