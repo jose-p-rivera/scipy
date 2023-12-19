@@ -124,7 +124,6 @@ jobs:
 #        if: ${{ runner.os == 'Windows' && env.IS_32_BIT == 'true' }}
       - name: Install OpenBLAS
         run: |
-          sudo apt-get update
           choco install openblas
         
       - name: Build wheels
