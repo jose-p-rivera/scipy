@@ -122,7 +122,11 @@ jobs:
 #          echo $(gfortran --version)
 #          echo $(gcc --version)
 #        if: ${{ runner.os == 'Windows' && env.IS_32_BIT == 'true' }}
-
+       - name: Install OpenBLAS
+        run: |
+            sudo apt-get update
+            sudo apt-get install -y libopenblas-dev
+        
       - name: Build wheels
         uses: pypa/cibuildwheel@v2.15.0
         env:

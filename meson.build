@@ -17,7 +17,11 @@ project(
   ],
 )
 
-openblas_dep = dependency('openblas', version : '>=0.3.25')
+openblas_dep = dependency('openblas', version : '>=0.3.15', required: false)
+if not openblas_dep.found()
+  openblas_dep = cc.find_library('openblas', required : false)
+endif
+
 
 cc = meson.get_compiler('c')
 cpp = meson.get_compiler('cpp')
